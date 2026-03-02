@@ -1,0 +1,56 @@
+name: student_grader
+description: Automated Student Grading App for Teachers
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # File picking
+  file_picker: ^6.1.1
+
+  # Excel read/write
+  excel: ^4.0.2
+
+  # PDF generation
+  pdf: ^3.10.7
+  printing: ^5.12.0
+
+  # File system paths
+  path_provider: ^2.1.2
+
+  # Share/export files
+  share_plus: ^7.2.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Permissions
+  permission_handler: ^11.3.0
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Outfit
+      fonts:
+        - asset: assets/fonts/Outfit-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Outfit-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Outfit-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Outfit-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Outfit-ExtraBold.ttf
+          weight: 800
