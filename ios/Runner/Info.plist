@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  INSTRUCTIONS:
+  Merge these keys into your existing ios/Runner/Info.plist file.
+  Replace the entire <dict> section below with your own Info.plist <dict>,
+  adding the keys shown here.
+-->
+<plist version="1.0">
+<dict>
+    <!-- Required for file_picker to access files -->
+    <key>UIFileSharingEnabled</key>
+    <true/>
+    <key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+
+    <!-- Required for share_plus to work on iPad -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Required to pick Excel files from your photo library.</string>
+
+    <!-- Allow opening xlsx from other apps -->
+    <key>CFBundleDocumentTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeName</key>
+            <string>Excel Spreadsheet</string>
+            <key>LSHandlerRank</key>
+            <string>Alternate</string>
+            <key>LSItemContentTypes</key>
+            <array>
+                <string>org.openxmlformats.spreadsheetml.sheet</string>
+                <string>com.microsoft.excel.xlsx</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Standard Flutter keys (keep your existing ones too) -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+</dict>
+</plist>
